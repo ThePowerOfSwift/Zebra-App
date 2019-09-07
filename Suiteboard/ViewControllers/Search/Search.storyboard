@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Medium.ttf">
+            <string>IBMPlexMono-Medium</string>
+        </array>
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="S3g-4e-rSX">
+            <objects>
+                <collectionViewController id="AbA-nQ-7ZN" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kQc-hU-the">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="654"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rdf-N9-mAw" customClass="ActivityViewCollectionViewLayout" customModule="Zebra" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SearchBlockViewCell" id="RL5-aK-ETU" customClass="SearchBlockViewCell" customModule="Zebra" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IN6-av-anc">
+                                            <rect key="frame" x="18" y="46" width="14" height="70"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUb-Zg-bS0">
+                                            <rect key="frame" x="20" y="20.000000000000007" width="12" height="110.66666666666669"/>
+                                            <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xUb-Zg-bS0" secondAttribute="trailing" constant="18" id="325-na-vqE"/>
+                                    <constraint firstItem="IN6-av-anc" firstAttribute="centerY" secondItem="RL5-aK-ETU" secondAttribute="centerY" id="HSy-y7-r9s"/>
+                                    <constraint firstItem="IN6-av-anc" firstAttribute="top" secondItem="RL5-aK-ETU" secondAttribute="topMargin" constant="-6" id="HlS-OQ-RzI"/>
+                                    <constraint firstItem="xUb-Zg-bS0" firstAttribute="leading" secondItem="RL5-aK-ETU" secondAttribute="leading" constant="20" id="HuB-rr-AQF"/>
+                                    <constraint firstItem="IN6-av-anc" firstAttribute="centerX" secondItem="RL5-aK-ETU" secondAttribute="centerX" id="OG6-eM-puc"/>
+                                    <constraint firstItem="xUb-Zg-bS0" firstAttribute="top" secondItem="RL5-aK-ETU" secondAttribute="top" constant="20" id="VM1-qq-X3C"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="IN6-av-anc" secondAttribute="trailing" constant="10" id="sla-d4-FJD"/>
+                                    <constraint firstItem="IN6-av-anc" firstAttribute="leading" secondItem="RL5-aK-ETU" secondAttribute="leadingMargin" constant="10" id="wh0-xI-2fz"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="V4e-2M-M3p"/>
+                                <connections>
+                                    <outlet property="blockImageView" destination="IN6-av-anc" id="6lR-Ie-jVb"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SearchUserViewCell" id="Jco-wi-p75" userLabel="SearchUserViewCell" customClass="SearchUserViewCell" customModule="Zebra" customModuleProvider="target">
+                                <rect key="frame" x="74" y="0.0" width="301" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="301" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="keY-Ig-9Vi">
+                                            <rect key="frame" x="96.666666666666686" y="-0.3333333333333286" width="108" height="44.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABf-iN-DAJ" userLabel="User Name Label">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="20"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40 Channels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiy-Fg-yZr" userLabel="User Channels Label">
+                                                    <rect key="frame" x="0.0" y="25" width="108" height="19.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKi-yG-KvS" userLabel="User Separator View">
+                                            <rect key="frame" x="0.0" y="-1" width="301" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="F27-sw-XHf"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="keY-Ig-9Vi" firstAttribute="centerY" secondItem="wgO-tt-TaQ" secondAttribute="centerY" id="4yd-u3-1eG"/>
+                                    <constraint firstItem="ZKi-yG-KvS" firstAttribute="leading" secondItem="wgO-tt-TaQ" secondAttribute="leading" id="E84-9q-0eu"/>
+                                    <constraint firstItem="wgO-tt-TaQ" firstAttribute="trailing" secondItem="ZKi-yG-KvS" secondAttribute="trailing" id="Y3h-bk-YHG"/>
+                                    <constraint firstItem="ZKi-yG-KvS" firstAttribute="bottom" secondItem="wgO-tt-TaQ" secondAttribute="bottom" id="ls1-VU-PqF"/>
+                                    <constraint firstItem="keY-Ig-9Vi" firstAttribute="centerX" secondItem="wgO-tt-TaQ" secondAttribute="centerX" id="uhE-AL-HfA"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="wgO-tt-TaQ"/>
+                                <size key="customSize" width="301" height="50"/>
+                                <connections>
+                                    <outlet property="channelNameLabel" destination="ABf-iN-DAJ" id="Dl7-Be-Z41"/>
+                                    <outlet property="userLabelText" destination="qiy-Fg-yZr" id="BaC-cs-u4I"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SearchChannelViewCell" id="wYE-o1-jhS" userLabel="SearchChannelViewCell" customClass="SearchChannelViewCell" customModule="Zebra" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="60" width="301" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="301" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maK-qA-Rb2" userLabel="Channel Name Label">
+                                            <rect key="frame" x="96.666666666666686" y="-10" width="108" height="20"/>
+                                            <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqB-Om-yi9" userLabel="Channel Separator View">
+                                            <rect key="frame" x="0.0" y="-1" width="301" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="JNa-9m-mMT"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="maK-qA-Rb2" firstAttribute="centerX" secondItem="wYE-o1-jhS" secondAttribute="centerX" id="B9L-ho-9qb"/>
+                                    <constraint firstItem="IqB-Om-yi9" firstAttribute="leading" secondItem="n48-Oh-yi9" secondAttribute="leading" id="Qta-ia-aiU"/>
+                                    <constraint firstItem="maK-qA-Rb2" firstAttribute="centerY" secondItem="wYE-o1-jhS" secondAttribute="centerY" id="apk-SU-VOF"/>
+                                    <constraint firstItem="IqB-Om-yi9" firstAttribute="bottom" secondItem="n48-Oh-yi9" secondAttribute="bottom" id="g95-kZ-PVb"/>
+                                    <constraint firstItem="n48-Oh-yi9" firstAttribute="trailing" secondItem="IqB-Om-yi9" secondAttribute="trailing" id="waO-pS-UkX"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="n48-Oh-yi9"/>
+                                <size key="customSize" width="301" height="50"/>
+                                <connections>
+                                    <outlet property="channelNameLabel" destination="maK-qA-Rb2" id="2Ha-1t-fnr"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AbA-nQ-7ZN" id="aZx-KY-alE"/>
+                            <outlet property="delegate" destination="AbA-nQ-7ZN" id="wiw-Vh-K1c"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gx9-lb-5es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.92805755395685" y="270.8542713567839"/>
+        </scene>
+        <!--Search Manage View Controller-->
+        <scene sceneID="lhf-pQ-HjP">
+            <objects>
+                <viewController storyboardIdentifier="SearchManageViewController" id="LKS-bF-Xpk" customClass="SearchManageViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LUi-zV-RwT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th6-Jj-ZhV">
+                                <rect key="frame" x="0.0" y="44" width="375" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Hr3-PE-Goj">
+                                        <rect key="frame" x="10" y="45" width="235" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nao-mN-JUS">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="33"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="16"/>
+                                                <state key="normal" title="Channels">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE4-o0-piS">
+                                                <rect key="frame" x="103" y="0.0" width="58" height="33"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="16"/>
+                                                <state key="normal" title="Blocks">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhy-rt-BfC">
+                                                <rect key="frame" x="187" y="0.0" width="48" height="33"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="16"/>
+                                                <state key="normal" title="Users">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="tgZ-js-iaS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tgZ-js-iaS" firstAttribute="top" secondItem="th6-Jj-ZhV" secondAttribute="top" id="7bF-9h-R5u"/>
+                                    <constraint firstItem="Hr3-PE-Goj" firstAttribute="top" secondItem="tgZ-js-iaS" secondAttribute="bottom" constant="2" id="FcS-8l-bND"/>
+                                    <constraint firstAttribute="height" constant="80" id="Hou-2Z-jOj"/>
+                                    <constraint firstAttribute="trailing" secondItem="tgZ-js-iaS" secondAttribute="trailing" id="LET-up-dj8"/>
+                                    <constraint firstItem="tgZ-js-iaS" firstAttribute="leading" secondItem="th6-Jj-ZhV" secondAttribute="leading" id="WyQ-ur-CI5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hr3-PE-Goj" secondAttribute="bottom" constant="2" id="hum-So-xul"/>
+                                    <constraint firstItem="Hr3-PE-Goj" firstAttribute="leading" secondItem="th6-Jj-ZhV" secondAttribute="leading" constant="10" id="wYV-HH-ALa"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-Hg-ZUz">
+                                <rect key="frame" x="0.0" y="124" width="375" height="654"/>
+                                <connections>
+                                    <segue destination="AbA-nQ-7ZN" kind="embed" id="bMx-wc-ZfV"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mYg-Hg-ZUz" firstAttribute="leading" secondItem="VZo-Md-hxu" secondAttribute="leading" id="2Cv-Qj-G58"/>
+                            <constraint firstItem="VZo-Md-hxu" firstAttribute="trailing" secondItem="mYg-Hg-ZUz" secondAttribute="trailing" id="9mB-8h-nvy"/>
+                            <constraint firstItem="th6-Jj-ZhV" firstAttribute="leading" secondItem="VZo-Md-hxu" secondAttribute="leading" id="eF8-Nu-Zgi"/>
+                            <constraint firstItem="th6-Jj-ZhV" firstAttribute="top" secondItem="VZo-Md-hxu" secondAttribute="top" id="fcZ-jJ-paf"/>
+                            <constraint firstItem="VZo-Md-hxu" firstAttribute="bottom" secondItem="mYg-Hg-ZUz" secondAttribute="bottom" id="hz9-Qt-zD3"/>
+                            <constraint firstItem="mYg-Hg-ZUz" firstAttribute="top" secondItem="th6-Jj-ZhV" secondAttribute="bottom" id="usJ-YN-pU2"/>
+                            <constraint firstItem="th6-Jj-ZhV" firstAttribute="trailing" secondItem="VZo-Md-hxu" secondAttribute="trailing" id="x3d-ZU-9GV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VZo-Md-hxu"/>
+                    </view>
+                    <connections>
+                        <outlet property="blocksButton" destination="wE4-o0-piS" id="j7B-7R-PIH"/>
+                        <outlet property="channelsButton" destination="Nao-mN-JUS" id="Bat-HC-CNH"/>
+                        <outlet property="searchBar" destination="tgZ-js-iaS" id="loE-Pj-rIh"/>
+                        <outlet property="searchButtonsStackView" destination="Hr3-PE-Goj" id="KTY-tV-E2c"/>
+                        <outlet property="usersButton" destination="Hhy-rt-BfC" id="rfn-st-jYs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBz-Vo-Wyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="159.375"/>
+        </scene>
+        <!--Table Search View Controller-->
+        <scene sceneID="Ls7-Wq-pCh">
+            <objects>
+                <viewController storyboardIdentifier="TableSearchViewController" id="SCf-6H-gS6" customClass="TableSearchViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eOp-IE-xhr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-Td-fbS">
+                                <rect key="frame" x="0.0" y="44" width="375" height="100"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Search Contents" translatesAutoresizingMaskIntoConstraints="NO" id="zp4-Nh-ZEP">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                        <color key="barTintColor" red="0.97504696059999996" green="1" blue="0.9796196358" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=regular" insetsLayoutMarginsFromSafeArea="YES"/>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1r-7O-fTN">
+                                        <rect key="frame" x="157" y="10.000000000000002" width="61" height="22.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="d1r-7O-fTN" firstAttribute="top" secondItem="a1Q-Td-fbS" secondAttribute="top" constant="10" id="WST-26-rLY"/>
+                                    <constraint firstAttribute="height" constant="100" id="gsV-sV-uOo"/>
+                                    <constraint firstItem="d1r-7O-fTN" firstAttribute="centerX" secondItem="a1Q-Td-fbS" secondAttribute="centerX" id="hhc-xF-i5s"/>
+                                    <constraint firstItem="zp4-Nh-ZEP" firstAttribute="leading" secondItem="a1Q-Td-fbS" secondAttribute="leading" id="s8E-3L-NdF">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="zp4-Nh-ZEP" secondAttribute="trailing" id="w7V-ZS-LY0">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="zp4-Nh-ZEP" secondAttribute="bottom" id="zJV-L2-2Ls"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sbC-gp-vJi">
+                                <rect key="frame" x="0.0" y="144" width="375" height="668"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableSearchChannelViewCell" rowHeight="104" id="Okr-SB-0Sz" userLabel="TableSearchChannelViewCell" customClass="TableSearchChannelViewCell" customModule="Zebra" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Okr-SB-0Sz" id="lp7-az-4Pu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9sC-PX-yZs">
+                                                    <rect key="frame" x="20" y="26.666666666666668" width="108" height="50.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="++Archive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWm-bO-jvV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="27"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uli Schoberl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVq-bc-7Yc">
+                                                            <rect key="frame" x="0.0" y="30.999999999999993" width="108" height="19.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <variation key="heightClass=regular-widthClass=regular" insetsLayoutMarginsFromSafeArea="YES"/>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Channels" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTv-Md-VUe">
+                                                    <rect key="frame" x="262.33333333333331" y="59.000000000000007" width="92.666666666666686" height="18.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular" insetsLayoutMarginsFromSafeArea="YES"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="YTv-Md-VUe" firstAttribute="bottom" secondItem="9sC-PX-yZs" secondAttribute="bottom" id="S6m-cb-n1O"/>
+                                                <constraint firstItem="9sC-PX-yZs" firstAttribute="centerY" secondItem="lp7-az-4Pu" secondAttribute="centerY" id="Zxr-pb-zxp"/>
+                                                <constraint firstAttribute="trailing" secondItem="YTv-Md-VUe" secondAttribute="trailing" constant="20" id="eih-ha-tNQ">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                                </constraint>
+                                                <constraint firstAttribute="bottom" secondItem="9sC-PX-yZs" secondAttribute="bottom" constant="26.5" id="xhw-iG-0SX"/>
+                                                <constraint firstItem="9sC-PX-yZs" firstAttribute="leading" secondItem="lp7-az-4Pu" secondAttribute="leading" constant="20" id="yxG-IG-ZVe">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                                </constraint>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="channelAuthorLabel" destination="hVq-bc-7Yc" id="xEn-a7-fl4"/>
+                                            <outlet property="channelTitleLabel" destination="xWm-bO-jvV" id="kyf-u2-GVW"/>
+                                            <outlet property="lastUpdatedLabel" destination="YTv-Md-VUe" id="JJw-Qv-7xx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableSearchUserViewCell" rowHeight="104" id="yO8-5g-UtS" userLabel="TableSearchUserViewCell" customClass="TableSearchUserViewCell" customModule="Zebra" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yO8-5g-UtS" id="4fm-R3-Uz6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-aZ-sg0">
+                                                    <rect key="frame" x="20.000000000000007" y="26.666666666666668" width="105.66666666666669" height="50.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Kang Seulgi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-sA-bkx" userLabel="Username Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="27"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 Blocks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-gd-Es7">
+                                                            <rect key="frame" x="0.0" y="30.999999999999993" width="81" height="19.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 June 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrB-jS-zwV" userLabel="Last Updated Label">
+                                                    <rect key="frame" x="254" y="59.000000000000007" width="101" height="18.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Gmn-aZ-sg0" firstAttribute="centerY" secondItem="4fm-R3-Uz6" secondAttribute="centerY" id="ZDd-aI-Pgb"/>
+                                                <constraint firstAttribute="trailing" secondItem="xrB-jS-zwV" secondAttribute="trailing" constant="20" id="dQU-Ce-XHz"/>
+                                                <constraint firstItem="xrB-jS-zwV" firstAttribute="bottom" secondItem="Gmn-aZ-sg0" secondAttribute="bottom" id="e2P-oq-ztt"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gmn-aZ-sg0" secondAttribute="bottom" constant="26.5" id="qYU-33-RFc"/>
+                                                <constraint firstItem="Gmn-aZ-sg0" firstAttribute="leading" secondItem="4fm-R3-Uz6" secondAttribute="leading" constant="20" id="tyD-uV-iRe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="blocksCountLabel" destination="jK4-gd-Es7" id="lsr-hK-anx"/>
+                                            <outlet property="lastUpdatedLabel" destination="xrB-jS-zwV" id="60s-M8-i3e"/>
+                                            <outlet property="usernameLabel" destination="hNa-sA-bkx" id="ryU-hW-Kv9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TableSearchEmptyStateCell" rowHeight="160" id="1ec-Lz-fJk" customClass="TableSearchEmptyStateCell" customModule="Zebra" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="236" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ec-Lz-fJk" id="Ne1-LB-jZA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing happen here. Please don't be perfect!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-Ez-jVk">
+                                                    <rect key="frame" x="25" y="57.666666666666657" width="325" height="44.333333333333343"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WRS-Ez-jVk" secondAttribute="trailing" constant="10" id="L3s-iP-8ly"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WRS-Ez-jVk" secondAttribute="bottom" constant="47" id="PRZ-lw-eNB"/>
+                                                <constraint firstItem="WRS-Ez-jVk" firstAttribute="leading" secondItem="Ne1-LB-jZA" secondAttribute="leadingMargin" constant="10" id="bnX-ka-k5G"/>
+                                                <constraint firstItem="WRS-Ez-jVk" firstAttribute="centerX" secondItem="Ne1-LB-jZA" secondAttribute="centerX" id="hBg-bB-eIa"/>
+                                                <constraint firstItem="WRS-Ez-jVk" firstAttribute="centerY" secondItem="Ne1-LB-jZA" secondAttribute="centerY" id="uJ4-sI-OCL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emptyStateLabel" destination="WRS-Ez-jVk" id="UxI-sf-Llq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a1Q-Td-fbS" firstAttribute="top" secondItem="xb5-7P-210" secondAttribute="top" id="VmH-dM-oT2"/>
+                            <constraint firstItem="sbC-gp-vJi" firstAttribute="top" secondItem="a1Q-Td-fbS" secondAttribute="bottom" id="XWH-jM-LsL"/>
+                            <constraint firstItem="a1Q-Td-fbS" firstAttribute="leading" secondItem="xb5-7P-210" secondAttribute="leading" id="Xjl-hN-66p"/>
+                            <constraint firstItem="sbC-gp-vJi" firstAttribute="leading" secondItem="xb5-7P-210" secondAttribute="leading" id="e6U-8A-6Nw"/>
+                            <constraint firstAttribute="bottom" secondItem="sbC-gp-vJi" secondAttribute="bottom" id="g7N-io-HQu"/>
+                            <constraint firstItem="a1Q-Td-fbS" firstAttribute="trailing" secondItem="xb5-7P-210" secondAttribute="trailing" id="iA6-Eq-Lkt"/>
+                            <constraint firstItem="sbC-gp-vJi" firstAttribute="centerX" secondItem="eOp-IE-xhr" secondAttribute="centerX" id="jOw-qr-kKT"/>
+                            <constraint firstItem="sbC-gp-vJi" firstAttribute="trailing" secondItem="xb5-7P-210" secondAttribute="trailing" id="zdL-3I-EpC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xb5-7P-210"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBarView" destination="a1Q-Td-fbS" id="QCx-nj-162"/>
+                        <outlet property="searchInputLabel" destination="d1r-7O-fTN" id="A2T-bj-SGA"/>
+                        <outlet property="searchTableView" destination="sbC-gp-vJi" id="juz-ve-aFo"/>
+                        <outlet property="tableSearchBar" destination="zp4-Nh-ZEP" id="u80-eZ-aew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vT-m3-K7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="901.47783251231533"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="moc-JO-bIY">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="zG1-JW-ss2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECi-BD-G3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232" y="838"/>
+        </scene>
+        <!--Search Channels View Controller-->
+        <scene sceneID="bWg-zj-0qd">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchChannelsViewController" id="8ml-JC-l67" customClass="SearchChannelsViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aob-IE-UHI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mJt-4J-x20">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJt-4J-x20" id="yAk-in-EZX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8ml-JC-l67" id="HzS-f1-VOM"/>
+                            <outlet property="delegate" destination="8ml-JC-l67" id="6z6-i5-pcC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99a-PA-wbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968" y="705"/>
+        </scene>
+        <!--Search Users View Controller-->
+        <scene sceneID="Y4U-vf-ob5">
+            <objects>
+                <tableViewController storyboardIdentifier="SearchUsersViewController" id="Ngd-vU-upa" customClass="SearchUsersViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KpO-fT-gAl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchUserViewCell" rowHeight="96" id="YpZ-dH-tlD" userLabel="Search User View Cell" customClass="SearchUserViewCell" customModule="Zebra" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YpZ-dH-tlD" id="TQY-Ax-4AT">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rpp-Gt-uug" userLabel="User Stack View">
+                                            <rect key="frame" x="26" y="24.999999999999996" width="323" height="45.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="RED VELVET" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gj-nk-2Ms" userLabel="User Name Label">
+                                                    <rect key="frame" x="116.66666666666666" y="0.0" width="90" height="25.333333333333332"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="by S.M. Entertainment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKE-0J-qii" userLabel="Channel Count Label">
+                                                    <rect key="frame" x="73.333333333333329" y="27.333333333333336" width="176.66666666666669" height="18.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x21-3N-ORX" userLabel="Connected Separator View">
+                                            <rect key="frame" x="20" y="94.666666666666671" width="335" height="1"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="D2F-3y-O8H"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rpp-Gt-uug" firstAttribute="leading" secondItem="TQY-Ax-4AT" secondAttribute="leadingMargin" constant="10" id="1p1-5k-GpH"/>
+                                        <constraint firstItem="rpp-Gt-uug" firstAttribute="centerY" secondItem="TQY-Ax-4AT" secondAttribute="centerY" id="Gvx-tq-0pn"/>
+                                        <constraint firstItem="x21-3N-ORX" firstAttribute="leading" secondItem="TQY-Ax-4AT" secondAttribute="leading" constant="20" id="UfD-FC-9RS"/>
+                                        <constraint firstItem="x21-3N-ORX" firstAttribute="top" secondItem="rpp-Gt-uug" secondAttribute="bottom" constant="24" id="Vai-Zw-pcy"/>
+                                        <constraint firstAttribute="bottom" secondItem="x21-3N-ORX" secondAttribute="bottom" id="X6D-df-xGT"/>
+                                        <constraint firstItem="rpp-Gt-uug" firstAttribute="centerX" secondItem="TQY-Ax-4AT" secondAttribute="centerX" id="Z1Y-pW-ktR"/>
+                                        <constraint firstAttribute="trailing" secondItem="x21-3N-ORX" secondAttribute="trailing" constant="20" id="sFX-rR-fld"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rpp-Gt-uug" secondAttribute="trailing" constant="10" id="zqB-Up-t8q"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="userChannelsLabel" destination="yKE-0J-qii" id="FWu-CZ-Qkp"/>
+                                    <outlet property="userNameLabel" destination="2Gj-nk-2Ms" id="t3Y-vr-Aci"/>
+                                    <outlet property="userStackView" destination="rpp-Gt-uug" id="LbV-sU-uMB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ngd-vU-upa" id="oRr-HN-qFe"/>
+                            <outlet property="delegate" destination="Ngd-vU-upa" id="Og2-gb-lfm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6A4-Wy-iao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2262" y="55"/>
+        </scene>
+        <!--Search Blocks View Controller-->
+        <scene sceneID="nZo-yL-uOT">
+            <objects>
+                <collectionViewController storyboardIdentifier="SearchBlocksViewController" id="4Z9-7i-j5W" customClass="SearchBlocksViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Lte-NE-Dbx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FuJ-Wb-Xju" customClass="ActivityViewCollectionViewLayout" customModule="Zebra" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchBlockViewCell" id="jhW-MZ-i59" customClass="SearchBlockViewCell" customModule="Zebra" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-d6-3VC">
+                                            <rect key="frame" x="18" y="18" width="14" height="14"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULJ-Zo-zao">
+                                            <rect key="frame" x="20" y="20" width="12" height="10"/>
+                                            <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="rIh-d6-3VC" firstAttribute="centerY" secondItem="jhW-MZ-i59" secondAttribute="centerY" id="1dZ-No-NRk"/>
+                                    <constraint firstItem="ULJ-Zo-zao" firstAttribute="top" secondItem="jhW-MZ-i59" secondAttribute="top" constant="20" id="E4t-4W-Lmg"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="rIh-d6-3VC" secondAttribute="trailing" constant="10" id="Ebo-Wg-dFW"/>
+                                    <constraint firstAttribute="trailing" secondItem="ULJ-Zo-zao" secondAttribute="trailing" constant="18" id="IwW-Hk-Mlc"/>
+                                    <constraint firstItem="rIh-d6-3VC" firstAttribute="centerX" secondItem="jhW-MZ-i59" secondAttribute="centerX" id="Jht-cK-ggD"/>
+                                    <constraint firstItem="rIh-d6-3VC" firstAttribute="leading" secondItem="jhW-MZ-i59" secondAttribute="leadingMargin" constant="10" id="m6M-qY-RyC"/>
+                                    <constraint firstItem="ULJ-Zo-zao" firstAttribute="leading" secondItem="jhW-MZ-i59" secondAttribute="leading" constant="20" id="sNA-CY-zQR"/>
+                                    <constraint firstAttribute="bottom" secondItem="ULJ-Zo-zao" secondAttribute="bottom" constant="20" id="ueS-E5-DxY"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="rIh-d6-3VC" secondAttribute="bottom" constant="10" id="vcY-TB-iZk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="blockImageView" destination="rIh-d6-3VC" id="5RJ-OA-QO7"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="4Z9-7i-j5W" id="A5L-eu-IV6"/>
+                            <outlet property="delegate" destination="4Z9-7i-j5W" id="73s-Pq-8Zd"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEr-aj-ADz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="43"/>
+        </scene>
+    </scenes>
+</document>

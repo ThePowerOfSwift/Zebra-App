@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Complete Channel View Controller-->
+        <scene sceneID="BOJ-uP-yze">
+            <objects>
+                <viewController storyboardIdentifier="CompleteChannelViewController" id="DkT-pN-Pc7" customClass="CompleteChannelViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8Y-1C-Xb0">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hr-5K-UkD" userLabel="Navigation Bar">
+                                <rect key="frame" x="0.0" y="24" width="834" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqd-gy-011">
+                                        <rect key="frame" x="18" y="15.5" width="39" height="33"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="16"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Someone want to exploded here, then this is just a beginning" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUZ-je-feX">
+                                        <rect key="frame" x="292" y="1" width="250" height="62.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="FHU-iO-LaI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aUZ-je-feX" firstAttribute="centerY" secondItem="Kqd-gy-011" secondAttribute="centerY" id="BvL-em-bwo"/>
+                                    <constraint firstItem="aUZ-je-feX" firstAttribute="centerX" secondItem="9hr-5K-UkD" secondAttribute="centerX" id="F51-Ez-svz"/>
+                                    <constraint firstItem="Kqd-gy-011" firstAttribute="leading" secondItem="9hr-5K-UkD" secondAttribute="leadingMargin" constant="10" id="M0z-lG-JVY"/>
+                                    <constraint firstAttribute="height" constant="64" id="bvZ-qu-ZNB"/>
+                                    <constraint firstItem="Kqd-gy-011" firstAttribute="centerY" secondItem="9hr-5K-UkD" secondAttribute="centerY" id="jOD-OL-ocS"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-I8-pb6">
+                                <rect key="frame" x="0.0" y="88" width="834" height="1106"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="wPr-ze-cM0" customClass="ActivityViewCollectionViewLayout" customModule="Zebra" customModuleProvider="target">
+                                    <size key="itemSize" width="414" height="345"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Lj-I8-pb6" firstAttribute="top" secondItem="9hr-5K-UkD" secondAttribute="bottom" id="AhB-Bg-S6a"/>
+                            <constraint firstItem="9hr-5K-UkD" firstAttribute="trailing" secondItem="GjB-Dv-nat" secondAttribute="trailing" id="Fd1-Dr-neu"/>
+                            <constraint firstItem="9hr-5K-UkD" firstAttribute="top" secondItem="GjB-Dv-nat" secondAttribute="top" id="Kke-lR-q3T"/>
+                            <constraint firstItem="9hr-5K-UkD" firstAttribute="leading" secondItem="GjB-Dv-nat" secondAttribute="leading" id="LOr-W1-u7d"/>
+                            <constraint firstAttribute="trailing" secondItem="9Lj-I8-pb6" secondAttribute="trailing" id="XJT-Ma-1ek"/>
+                            <constraint firstItem="9Lj-I8-pb6" firstAttribute="leading" secondItem="B8Y-1C-Xb0" secondAttribute="leading" id="XZK-Ol-1TO"/>
+                            <constraint firstAttribute="bottom" secondItem="9Lj-I8-pb6" secondAttribute="bottom" id="hu2-sX-tfA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GjB-Dv-nat"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Kqd-gy-011" id="rhH-v2-t9n"/>
+                        <outlet property="blockCollectionView" destination="9Lj-I8-pb6" id="gxl-qz-ffo"/>
+                        <outlet property="channelNavBar" destination="9hr-5K-UkD" id="hBH-J9-yjv"/>
+                        <outlet property="titleChannelLabel" destination="aUZ-je-feX" id="AyK-zY-Ujj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjP-LV-sMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="162.72321428571428"/>
+        </scene>
+    </scenes>
+</document>

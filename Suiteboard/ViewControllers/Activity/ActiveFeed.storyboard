@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Activity View Controller-->
+        <scene sceneID="vdU-vg-m7t">
+            <objects>
+                <viewController storyboardIdentifier="ActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zuy-0f-tnw" customClass="ActivityViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Z0-ET-RtS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lRG-GL-e8s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="Dsk-bC-Yjf" customClass="ActivityViewCollectionViewLayout" customModule="Zebra" customModuleProvider="target">
+                                    <size key="itemSize" width="414" height="345"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pyj-g0-SY8" firstAttribute="bottom" secondItem="lRG-GL-e8s" secondAttribute="bottom" id="48X-kg-A6H"/>
+                            <constraint firstItem="lRG-GL-e8s" firstAttribute="leading" secondItem="Pyj-g0-SY8" secondAttribute="leading" id="4pr-tL-KYS"/>
+                            <constraint firstItem="lRG-GL-e8s" firstAttribute="trailing" secondItem="Pyj-g0-SY8" secondAttribute="trailing" id="Fuu-Nd-O9u"/>
+                            <constraint firstItem="lRG-GL-e8s" firstAttribute="top" secondItem="0Z0-ET-RtS" secondAttribute="top" id="xTb-9u-x5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pyj-g0-SY8"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityCollectionView" destination="lRG-GL-e8s" id="SLL-hZ-bhI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjX-ce-gc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830.43478260869574" y="156.69642857142856"/>
+        </scene>
+    </scenes>
+</document>

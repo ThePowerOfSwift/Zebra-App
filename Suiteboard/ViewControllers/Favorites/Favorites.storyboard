@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Medium.ttf">
+            <string>IBMPlexMono-Medium</string>
+        </array>
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="cTh-ov-Y0N">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="4Ee-Vl-B07" customClass="FavoritesViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSW-uK-Doi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uW-Xb-g4x" userLabel="Favorites Nav Bar View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-jM-632">
+                                        <rect key="frame" x="166.5" y="26.5" width="81" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqh-Es-GMC">
+                                        <rect key="frame" x="370" y="25" width="26" height="22"/>
+                                        <state key="normal" image="settings-tab-icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eqh-Es-GMC" firstAttribute="centerY" secondItem="v2R-jM-632" secondAttribute="centerY" id="71T-bl-MJH"/>
+                                    <constraint firstItem="eqh-Es-GMC" firstAttribute="trailing" secondItem="9uW-Xb-g4x" secondAttribute="trailingMargin" constant="-10" id="8OC-cL-VVE"/>
+                                    <constraint firstItem="v2R-jM-632" firstAttribute="centerY" secondItem="9uW-Xb-g4x" secondAttribute="centerY" id="eoW-1I-OuA"/>
+                                    <constraint firstItem="v2R-jM-632" firstAttribute="centerX" secondItem="9uW-Xb-g4x" secondAttribute="centerX" id="fE0-ES-Xai"/>
+                                    <constraint firstAttribute="height" constant="72" id="zHa-WP-tfw"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-0g-jHb" userLabel="Favorites Collection View">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZZ7-xS-giZ">
+                                    <size key="itemSize" width="414" height="267"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteEmptyStateCell" id="bot-QO-MiL" customClass="FavoriteEmptyStateCell" customModule="Zebra" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No favorites here, are you sure?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-Ej-4KJ">
+                                                    <rect key="frame" x="44" y="122.5" width="326.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                                    <color key="textColor" red="0.97504696059999996" green="1" blue="0.9796196358" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="LRE-Ej-4KJ" firstAttribute="centerX" secondItem="bot-QO-MiL" secondAttribute="centerX" id="1Rm-xM-FeU"/>
+                                            <constraint firstItem="LRE-Ej-4KJ" firstAttribute="centerY" secondItem="bot-QO-MiL" secondAttribute="centerY" id="PmS-LH-GnU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="emptyStateLabel" destination="LRE-Ej-4KJ" id="VoM-od-d5V"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IIM-Up-sjC" firstAttribute="trailing" secondItem="9uW-Xb-g4x" secondAttribute="trailing" id="7Je-Oz-O1z"/>
+                            <constraint firstItem="eBk-0g-jHb" firstAttribute="trailing" secondItem="IIM-Up-sjC" secondAttribute="trailing" id="IDm-UU-n7M"/>
+                            <constraint firstItem="eBk-0g-jHb" firstAttribute="top" secondItem="9uW-Xb-g4x" secondAttribute="bottom" constant="8" id="J0Z-8H-wNy"/>
+                            <constraint firstItem="9uW-Xb-g4x" firstAttribute="top" secondItem="IIM-Up-sjC" secondAttribute="top" id="QGu-Jf-8qk"/>
+                            <constraint firstItem="eBk-0g-jHb" firstAttribute="bottom" secondItem="IIM-Up-sjC" secondAttribute="bottom" id="Qwf-RH-4Ov"/>
+                            <constraint firstItem="9uW-Xb-g4x" firstAttribute="leading" secondItem="IIM-Up-sjC" secondAttribute="leading" id="Vjg-HP-HW1"/>
+                            <constraint firstItem="eBk-0g-jHb" firstAttribute="leading" secondItem="IIM-Up-sjC" secondAttribute="leading" id="qdf-mk-Q2d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IIM-Up-sjC"/>
+                    </view>
+                    <connections>
+                        <outlet property="favoritesCollectionView" destination="eBk-0g-jHb" id="Che-Qt-Mag"/>
+                        <outlet property="favoritesLabel" destination="v2R-jM-632" id="paI-Hx-isp"/>
+                        <outlet property="favoritesNavBarView" destination="9uW-Xb-g4x" id="FJE-C9-IR2"/>
+                        <outlet property="settingsButton" destination="eqh-Es-GMC" id="4p5-Qz-CFG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYr-Sg-RXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="178.79464285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="settings-tab-icon" width="26" height="6"/>
+    </resources>
+</document>

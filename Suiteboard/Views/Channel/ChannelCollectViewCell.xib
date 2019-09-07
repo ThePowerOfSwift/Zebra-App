@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ef7-kh-2AU" customClass="ChannelCollectViewCell" customModule="Suite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ozN-Af-cFI">
+                        <rect key="frame" x="119" y="25" width="176.5" height="46"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="RED VELVET" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0t-HA-6JB">
+                                <rect key="frame" x="43" y="0.0" width="90" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="by S.M. Entertainment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-ZO-Xiv">
+                                <rect key="frame" x="0.0" y="27.5" width="176.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwW-D6-LPt" userLabel="Connected Separator View">
+                        <rect key="frame" x="0.0" y="95" width="414" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="O43-12-P2C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qwW-D6-LPt" firstAttribute="leading" secondItem="ef7-kh-2AU" secondAttribute="leading" id="3qm-13-loJ"/>
+                <constraint firstItem="ozN-Af-cFI" firstAttribute="centerY" secondItem="ef7-kh-2AU" secondAttribute="centerY" id="7H1-Js-Svo"/>
+                <constraint firstAttribute="bottom" secondItem="qwW-D6-LPt" secondAttribute="bottom" id="N4X-lA-3ZG"/>
+                <constraint firstItem="ozN-Af-cFI" firstAttribute="top" secondItem="ef7-kh-2AU" secondAttribute="top" constant="25" id="YCV-t1-omI"/>
+                <constraint firstItem="ozN-Af-cFI" firstAttribute="centerX" secondItem="ef7-kh-2AU" secondAttribute="centerX" id="ol9-05-9A2"/>
+                <constraint firstItem="qwW-D6-LPt" firstAttribute="top" secondItem="ozN-Af-cFI" secondAttribute="bottom" constant="24" id="qM0-Am-NNI"/>
+                <constraint firstAttribute="trailing" secondItem="qwW-D6-LPt" secondAttribute="trailing" id="qzS-6X-pQE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="rfA-Ac-Xjq"/>
+            <connections>
+                <outlet property="channelNameLabel" destination="V0t-HA-6JB" id="Drh-TW-ClO"/>
+                <outlet property="channelSeparatorView" destination="qwW-D6-LPt" id="jII-6l-2un"/>
+                <outlet property="channelStackView" destination="ozN-Af-cFI" id="FJg-rD-ADF"/>
+                <outlet property="channelUserLabel" destination="bqp-ZO-Xiv" id="LSs-uF-yzG"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="101"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Medium.ttf">
+            <string>IBMPlexMono-Medium</string>
+        </array>
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="ePQ-aH-qIM">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="Bcl-Io-LT7" customClass="SettingsViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vnb-ZI-EhM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14H-ri-vRt" userLabel="Feedback View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeR-gE-eSW">
+                                        <rect key="frame" x="115" y="32.5" width="184" height="35"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                        <state key="normal" title="-&gt;-&gt; Feedback &lt;-&lt;-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LeR-gE-eSW" firstAttribute="centerX" secondItem="14H-ri-vRt" secondAttribute="centerX" id="Ebt-7F-BJv"/>
+                                    <constraint firstAttribute="height" constant="100" id="MC1-9l-LWn"/>
+                                    <constraint firstItem="LeR-gE-eSW" firstAttribute="centerY" secondItem="14H-ri-vRt" secondAttribute="centerY" id="OIz-4I-BuZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWL-me-kms" userLabel="Container View">
+                                <rect key="frame" x="0.0" y="144" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Do-H8-8Mu">
+                                        <rect key="frame" x="92" y="30.5" width="230.5" height="39.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zebra - Mood Directories" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEh-nW-Fbw">
+                                                <rect key="frame" x="0.0" y="0.0" width="230.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v1.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-cf-zUK">
+                                                <rect key="frame" x="94" y="21" width="42" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0S-nE-nY9">
+                                        <rect key="frame" x="20" y="99" width="374" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="2UG-BZ-J7X"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MR7-aM-ebp"/>
+                                    <constraint firstAttribute="bottom" secondItem="L0S-nE-nY9" secondAttribute="bottom" id="d3P-FD-mwB"/>
+                                    <constraint firstItem="L0S-nE-nY9" firstAttribute="leading" secondItem="KWL-me-kms" secondAttribute="leading" constant="20" id="fw1-4y-Au3"/>
+                                    <constraint firstItem="7Do-H8-8Mu" firstAttribute="centerY" secondItem="KWL-me-kms" secondAttribute="centerY" id="gi8-Xe-wdN"/>
+                                    <constraint firstItem="7Do-H8-8Mu" firstAttribute="centerX" secondItem="KWL-me-kms" secondAttribute="centerX" id="jzd-Yd-HDq"/>
+                                    <constraint firstAttribute="trailing" secondItem="L0S-nE-nY9" secondAttribute="trailing" constant="20" id="qcV-7M-S5R"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-pp-Ejq" userLabel="Made Are.na View">
+                                <rect key="frame" x="0.0" y="244" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="0Q1-QJ-jkM">
+                                        <rect key="frame" x="40" y="34.5" width="334" height="31"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
+                                        <state key="normal" title="Contributed data by Are.na">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0Q1-QJ-jkM" firstAttribute="leading" secondItem="p2x-pp-Ejq" secondAttribute="leading" constant="40" id="Enk-pq-2ss"/>
+                                    <constraint firstItem="0Q1-QJ-jkM" firstAttribute="centerX" secondItem="p2x-pp-Ejq" secondAttribute="centerX" id="QlZ-58-2Nl"/>
+                                    <constraint firstAttribute="height" constant="100" id="YOp-h0-46c"/>
+                                    <constraint firstItem="0Q1-QJ-jkM" firstAttribute="centerY" secondItem="p2x-pp-Ejq" secondAttribute="centerY" id="bcH-jW-Eig"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Q1-QJ-jkM" secondAttribute="trailing" constant="40" id="eeh-mF-R9H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KWL-me-kms" firstAttribute="leading" secondItem="14H-ri-vRt" secondAttribute="leading" id="D4c-mt-hn5"/>
+                            <constraint firstItem="p2x-pp-Ejq" firstAttribute="trailing" secondItem="GFg-zz-pQg" secondAttribute="trailing" id="Ljw-2Q-3i6"/>
+                            <constraint firstItem="GFg-zz-pQg" firstAttribute="trailing" secondItem="14H-ri-vRt" secondAttribute="trailing" id="Urp-RV-4oH"/>
+                            <constraint firstItem="14H-ri-vRt" firstAttribute="top" secondItem="GFg-zz-pQg" secondAttribute="top" id="UuE-D9-HON"/>
+                            <constraint firstItem="p2x-pp-Ejq" firstAttribute="top" secondItem="KWL-me-kms" secondAttribute="bottom" id="X6t-6O-GIA"/>
+                            <constraint firstItem="p2x-pp-Ejq" firstAttribute="leading" secondItem="GFg-zz-pQg" secondAttribute="leading" id="o4j-Og-qnJ"/>
+                            <constraint firstItem="KWL-me-kms" firstAttribute="top" secondItem="14H-ri-vRt" secondAttribute="bottom" id="wEK-oC-zl0"/>
+                            <constraint firstItem="KWL-me-kms" firstAttribute="trailing" secondItem="14H-ri-vRt" secondAttribute="trailing" id="wzG-3G-shw"/>
+                            <constraint firstItem="14H-ri-vRt" firstAttribute="leading" secondItem="GFg-zz-pQg" secondAttribute="leading" id="x9c-C1-YT3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GFg-zz-pQg"/>
+                    </view>
+                    <connections>
+                        <outlet property="arenaButton" destination="0Q1-QJ-jkM" id="Mr0-zD-0bl"/>
+                        <outlet property="feedbackButton" destination="LeR-gE-eSW" id="tuf-PJ-FGD"/>
+                        <outlet property="versionLabel" destination="Sbd-cf-zUK" id="CvW-ae-L3z"/>
+                        <outlet property="zebraInputLabel" destination="sEh-nW-Fbw" id="rXE-kf-14U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOV-dI-zUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="19.419642857142858"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bq8-aV-Jrr">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-fi-ked">
+                                <rect key="frame" x="116" y="254" width="88.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="d1e-fi-ked" secondAttribute="centerY" id="H0s-hz-dDP"/>
+                            <constraint firstAttribute="centerX" secondItem="d1e-fi-ked" secondAttribute="centerX" id="wFy-hW-Bib"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="127"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="kdp-r1-eMx">
+            <objects>
+                <viewController id="Bq8-aV-Jrr" customClass="MessagesViewController" customModule="SuiteMessages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dDo-ts-QI3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1x-sJ-tC7">
+                                <rect key="frame" x="0.0" y="44" width="320" height="96"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-3N-GXX">
+                                        <rect key="frame" x="10" y="58" width="248" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg0-gy-fZs">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="35"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                                <state key="normal" title="Channels">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gko-qD-8xB">
+                                                <rect key="frame" x="108" y="0.0" width="62" height="35"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                                <state key="normal" title="Blocks">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U1-YU-bq3">
+                                                <rect key="frame" x="196" y="0.0" width="52" height="35"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                                <state key="normal" title="Users">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="poe-L2-qyb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Fv6-er-fhV"/>
+                                    <constraint firstItem="vxa-3N-GXX" firstAttribute="leading" secondItem="B1x-sJ-tC7" secondAttribute="leading" constant="10" id="IXS-1h-FIj"/>
+                                    <constraint firstItem="vxa-3N-GXX" firstAttribute="top" secondItem="poe-L2-qyb" secondAttribute="bottom" constant="2" id="SCi-dH-MpF"/>
+                                    <constraint firstItem="poe-L2-qyb" firstAttribute="top" secondItem="B1x-sJ-tC7" secondAttribute="top" id="XNj-WJ-Df4"/>
+                                    <constraint firstAttribute="trailing" secondItem="poe-L2-qyb" secondAttribute="trailing" id="ZHK-yf-jGe"/>
+                                    <constraint firstItem="poe-L2-qyb" firstAttribute="leading" secondItem="B1x-sJ-tC7" secondAttribute="leading" id="rfs-xw-gnw"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HeT-0i-SeT" userLabel="Search Collection View">
+                                <rect key="frame" x="0.0" y="140" width="320" height="354"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2eU-Wj-Rth">
+                                    <size key="itemSize" width="414" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HeT-0i-SeT" firstAttribute="leading" secondItem="NOb-1L-PJX" secondAttribute="leading" id="76G-IH-AdM"/>
+                            <constraint firstItem="NOb-1L-PJX" firstAttribute="trailing" secondItem="HeT-0i-SeT" secondAttribute="trailing" id="A9g-v9-vmN"/>
+                            <constraint firstItem="B1x-sJ-tC7" firstAttribute="trailing" secondItem="NOb-1L-PJX" secondAttribute="trailing" id="SBV-MM-U8V"/>
+                            <constraint firstItem="B1x-sJ-tC7" firstAttribute="top" secondItem="NOb-1L-PJX" secondAttribute="top" id="W7B-rc-cSx"/>
+                            <constraint firstItem="B1x-sJ-tC7" firstAttribute="leading" secondItem="NOb-1L-PJX" secondAttribute="leading" id="ce1-Lj-tS2"/>
+                            <constraint firstItem="HeT-0i-SeT" firstAttribute="top" secondItem="B1x-sJ-tC7" secondAttribute="bottom" id="sNd-4s-MFc"/>
+                            <constraint firstItem="NOb-1L-PJX" firstAttribute="bottom" secondItem="HeT-0i-SeT" secondAttribute="bottom" id="sS9-wC-3u5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NOb-1L-PJX"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="blocksButton" destination="Gko-qD-8xB" id="ZZT-95-Mgr"/>
+                        <outlet property="channelsButton" destination="tg0-gy-fZs" id="lgr-6s-91v"/>
+                        <outlet property="searchBar" destination="poe-L2-qyb" id="9Wb-wJ-Dwu"/>
+                        <outlet property="usersButton" destination="6U1-YU-bq3" id="xLk-e0-uSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-LX-gNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="186"/>
+        </scene>
+    </scenes>
+</document>

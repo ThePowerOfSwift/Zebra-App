@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelTableViewCell" rowHeight="96" id="5y3-GS-vUt" userLabel="Connected Block Table View Cell" customClass="ChannelTableViewCell" customModule="Suite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5y3-GS-vUt" id="e6w-re-K2S">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="95.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6eH-bi-ZYn">
+                        <rect key="frame" x="30" y="25" width="354" height="45.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="RED VELVET" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13C-Zy-eyy">
+                                <rect key="frame" x="132" y="0.0" width="90" height="25"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="by S.M. Entertainment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJg-ER-GPy">
+                                <rect key="frame" x="89" y="27" width="176.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEq-5E-zdi" userLabel="Connected Separator View">
+                        <rect key="frame" x="20" y="94.5" width="374" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="5mN-Xs-Mv0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6eH-bi-ZYn" firstAttribute="centerX" secondItem="e6w-re-K2S" secondAttribute="centerX" id="7fV-ix-i7E"/>
+                    <constraint firstItem="6eH-bi-ZYn" firstAttribute="centerY" secondItem="e6w-re-K2S" secondAttribute="centerY" id="8lV-cv-vPo"/>
+                    <constraint firstItem="tEq-5E-zdi" firstAttribute="leading" secondItem="e6w-re-K2S" secondAttribute="leading" constant="20" id="9xk-3I-m2x"/>
+                    <constraint firstItem="6eH-bi-ZYn" firstAttribute="leading" secondItem="e6w-re-K2S" secondAttribute="leadingMargin" constant="10" id="FoL-tB-lLT"/>
+                    <constraint firstAttribute="trailing" secondItem="tEq-5E-zdi" secondAttribute="trailing" constant="20" id="Waf-FS-vhF"/>
+                    <constraint firstAttribute="bottom" secondItem="tEq-5E-zdi" secondAttribute="bottom" id="gcl-RW-WgC"/>
+                    <constraint firstItem="tEq-5E-zdi" firstAttribute="top" secondItem="6eH-bi-ZYn" secondAttribute="bottom" constant="24" id="uvl-a0-nNv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6eH-bi-ZYn" secondAttribute="trailing" constant="10" id="wrk-iZ-MKb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="authorNameLabel" destination="eJg-ER-GPy" id="v73-IX-11Y"/>
+                <outlet property="channelNameLabel" destination="13C-Zy-eyy" id="rnm-Up-6Qn"/>
+                <outlet property="channelSeparatorView" destination="tEq-5E-zdi" id="DMz-L6-ttr"/>
+                <outlet property="channelStackView" destination="6eH-bi-ZYn" id="vgM-um-c5x"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

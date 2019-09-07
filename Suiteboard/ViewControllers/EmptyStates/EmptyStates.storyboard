@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Empty States View Controller-->
+        <scene sceneID="W5c-cY-17O">
+            <objects>
+                <viewController storyboardIdentifier="EmptyStatesViewController" id="yqU-s0-eze" customClass="EmptyStatesViewController" customModule="Zebra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dAn-Bg-jFH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing's happen here. Find another one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aT6-M2-hIh">
+                                <rect key="frame" x="20" y="426" width="374" height="44.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aT6-M2-hIh" firstAttribute="leading" secondItem="dkY-VT-Qap" secondAttribute="leading" constant="20" id="LgP-Ln-02B"/>
+                            <constraint firstItem="aT6-M2-hIh" firstAttribute="centerX" secondItem="dAn-Bg-jFH" secondAttribute="centerX" id="SRo-D6-psg"/>
+                            <constraint firstItem="dkY-VT-Qap" firstAttribute="trailing" secondItem="aT6-M2-hIh" secondAttribute="trailing" constant="20" id="WAm-Vg-4MZ"/>
+                            <constraint firstItem="aT6-M2-hIh" firstAttribute="centerY" secondItem="dAn-Bg-jFH" secondAttribute="centerY" id="gPh-jS-jmQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dkY-VT-Qap"/>
+                    </view>
+                    <connections>
+                        <outlet property="emptyStatesMainLabel" destination="aT6-M2-hIh" id="1MY-xa-wK3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaF-Y1-XHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="142"/>
+        </scene>
+    </scenes>
+</document>
