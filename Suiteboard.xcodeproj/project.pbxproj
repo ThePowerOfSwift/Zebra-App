@@ -2328,13 +2328,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.7;
 				DEVELOPMENT_TEAM = DLL674263K;
 				INFOPLIST_FILE = Suiteboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = firasrafislam.Suiteboard;
 				PRODUCT_NAME = Zebra;
 				SWIFT_OBJC_BRIDGING_HEADER = "Suiteboard/Suite-bridging-header.h";
@@ -2350,13 +2352,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.7;
 				DEVELOPMENT_TEAM = DLL674263K;
 				INFOPLIST_FILE = Suiteboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = firasrafislam.Suiteboard;
 				PRODUCT_NAME = Zebra;
 				SWIFT_OBJC_BRIDGING_HEADER = "Suiteboard/Suite-bridging-header.h";
