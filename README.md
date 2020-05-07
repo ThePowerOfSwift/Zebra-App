@@ -3,9 +3,5 @@ Zebra is mood visual and resources knowledge iOS App with Are.na API, built with
 
 ![alt text](https://github.com/firasraf/Zebra-App/blob/master/Simulator%20Screen%20Shot%20-%20iPad%20Pro%20(11-inch)%20-%202019-09-03%20at%2006.29.14.png)
 
-![alt text](https://github.com/firasraf/Zebra-App/blob/master/screen-zebra-1.png)
-
-![alt text](https://github.com/firasraf/Zebra-App/blob/master/screen-zebra-2.png)
-
 ![alt text](https://github.com/firasraf/Zebra-App/blob/master/screen-zebra-ipados.png)
 
